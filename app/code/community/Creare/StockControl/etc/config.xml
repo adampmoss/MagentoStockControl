@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<config>
+    <modules>
+        <Creare_StockControl>
+            <version>0.1.0</version>
+        </Creare_StockControl>
+    </modules>
+    <global>
+        <blocks>
+            <stockcontrol>
+                <class>Creare_StockControl_Block</class>
+            </stockcontrol>
+        </blocks>
+        <helpers>
+            <stockcontrol>
+                <class>Creare_StockControl_Helper</class>
+            </stockcontrol>
+        </helpers>
+        <models>
+            <stockcontrol>
+                <class>Creare_StockControl_Model</class>
+            </stockcontrol>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <stockcontrol before="Mage_Adminhtml">Creare_StockControl_Adminhtml</stockcontrol>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <stockcontrol>
+                    <file>creare/stockcontrol.xml</file>
+                </stockcontrol>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <cataloginventory>
+            <stockcontrol>
+                <change_status>0</change_status>
+                <sort_by>entity_id</sort_by>
+                <order>asc</order>
+            </stockcontrol>
+        </cataloginventory>
+    </default>
+</config>

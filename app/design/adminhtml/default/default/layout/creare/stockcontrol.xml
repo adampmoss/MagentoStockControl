@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+   <adminhtml_stock_index>
+        <reference name="js">
+            <block type="core/template" template="creare/stockcontrol/inline.phtml" />
+        </reference>
+        <reference name="content">
+            <block type="stockcontrol/adminhtml_stock" name="stockcontrol" />
+        </reference>
+    </adminhtml_stock_index>
+   <adminhtml_stock_grid>
+       <reference name="root">
+           <block type="stockcontrol/adminhtml_stock_grid" name="stock.grid" output="toHtml" />
+       </reference>
+   </adminhtml_stock_grid>
+</layout>

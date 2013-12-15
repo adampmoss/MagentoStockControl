@@ -1,0 +1,26 @@
+<script type="text/javascript">
+function updateStock(input, id)
+{
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/updateStock') ?>', {
+        method: 'post',
+        parameters: { id: id, qty: $(input).getValue() },
+        onSuccess: function(response) {
+            stock_gridJsObject.reload();
+        }
+    });
+    
+}
+
+function changeIsInStock(id, instock)
+{
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/changeIsInStock') ?>', {
+        method: 'post',
+        parameters: { id: id, instock: instock },
+        onSuccess: function(response) {
+            stock_gridJsObject.reload();
+        }
+    });
+    
+}
+
+</script>
