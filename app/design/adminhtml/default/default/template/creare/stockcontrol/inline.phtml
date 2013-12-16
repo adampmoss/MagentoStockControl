@@ -13,7 +13,7 @@ function updateStock(input, id)
 
 function changeStatus(id, instock)
 {
-    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/changeIsInStock') ?>', {
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/changeStatus') ?>', {
         method: 'post',
         parameters: { id: id, instock: instock },
         onSuccess: function(response) {
